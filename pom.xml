@@ -83,9 +83,9 @@
                     <configuration>
                         <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
                         <baseImage>java:8-alpine</baseImage>
-                        <entryPoint>["java", "-Djava.security.egd=file:/dev/./urandom", "-jar",
-                            "/${project.build.finalName}.jar"]
-                        </entryPoint>
+                        <!-- @formatter: off-->
+                        <entryPoint>["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
+                        <!-- @formatter: on-->
                         <resources>
                             <resource>
                                 <targetPath>/</targetPath>

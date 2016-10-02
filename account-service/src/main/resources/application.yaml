@@ -9,6 +9,12 @@ spring:
     username: root
     password: dbpass
     initialize: true
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: kafka:9092
+          zk-nodes: zookeeper:2181
 ---
 spring:
   profiles: test
@@ -18,3 +24,6 @@ spring:
   datasource:
     url: jdbc:h2:mem:testdb;DB_CLOSE_ON_EXIT=FALSE
     initialize: false
+  sleuth:
+    stream:
+      enabled: false
