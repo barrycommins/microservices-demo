@@ -1,5 +1,7 @@
 # microservices-demo
-Microservices Demo, which will include service discovery, distributed tracing, configuration management and circuit breakers
+Microservices Demo, which will include service discovery, distributed tracing, configuration management and circuit breakers.
+
+Many of the concepts, and some of the code will come from here: https://github.com/kbastani/spring-cloud-event-sourcing-example , but there will be some different technology choices and possibly a different problem domain.
 
 Currently only contains one service, Account Service that does nothing but boot so far.
 
