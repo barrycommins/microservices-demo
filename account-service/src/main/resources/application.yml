@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: account-service
+  cloud:
+     stream:
+       kafka:
+         binder:
+           auto-create-topics: false
+       bindings:
+         output:
+           destination: account
+---
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/dev
+    username: root
+    password: dbpass
+    initialize: true
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+          zk-nodes: localhost:2181
+---
+spring:
+  profiles: docker
+  datasource:
+    url: jdbc:mysql://mysql:3306/dev
+    username: root
+    password: dbpass
+    initialize: true
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: kafka:9092
+---
+spring:
+  profiles: test
+  jpa:
+    show_sql: false
+    database: H2
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_ON_EXIT=FALSE
+    initialize: false
