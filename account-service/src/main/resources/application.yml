@@ -17,12 +17,9 @@ spring:
     username: root
     password: dbpass
     initialize: true
-  cloud:
-    stream:
-      kafka:
-        binder:
-          brokers: localhost:9092
-          zk-nodes: localhost:2181
+eureka:
+  client:
+    enabled: false
 ---
 spring:
   profiles: docker
@@ -36,6 +33,10 @@ spring:
       kafka:
         binder:
           brokers: kafka:9092
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka
 ---
 spring:
   profiles: test
@@ -45,3 +46,6 @@ spring:
   datasource:
     url: jdbc:h2:mem:testdb;DB_CLOSE_ON_EXIT=FALSE
     initialize: false
+eureka:
+  client:
+    enabled: false
