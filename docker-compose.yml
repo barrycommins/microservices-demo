@@ -13,11 +13,17 @@ services:
     links:
       - mysql
   discovery-service:
-      image: barrycommins/discovery-service
-      ports:
-        - "8761:8761"
-      environment:
-        - SPRING_PROFILES_ACTIVE=docker
+    image: barrycommins/discovery-service
+    ports:
+      - "8761:8761"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+  admin-server:
+    image: barrycommins/admin-server
+    ports:
+      - "9090:9090"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
   mysql:
     image: mysql:5.7
     ports:
