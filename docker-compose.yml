@@ -37,16 +37,17 @@ services:
      - MYSQL_ROOT_PASSWORD=dbpass
      - MYSQL_DATABASE=dev
   kafka:
-    image: confluentinc/cp-kafka:3.0.1
+    image: confluentinc/cp-kafka:3.1.0
     environment:
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
       - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+      - KAFKA_ADVERTISED_HOST_NAME=kafka
     ports:
       - "9092:9092"
     depends_on:
       - zookeeper
   zookeeper:
-    image: confluentinc/cp-zookeeper:3.0.1
+    image: confluentinc/cp-zookeeper:3.1.0
     environment:
       - ZOOKEEPER_CLIENT_PORT=2181
     ports:
