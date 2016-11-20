@@ -3,19 +3,24 @@ services:
   account-service:
     image: barrycommins/account-service
     ports:
-      - "8080:8080"
+      - "8081:8081"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     depends_on:
       - mysql
       - kafka
-      - zookeeper
     links:
       - mysql
   discovery-service:
     image: barrycommins/discovery-service
     ports:
       - "8761:8761"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+  edge-service:
+    image: barrycommins/edge-service
+    ports:
+      - "8080:8080"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
   admin-server:

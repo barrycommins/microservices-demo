@@ -1,0 +1,11 @@
+eureka:
+  client:
+    register-with-eureka: false
+---
+spring:
+  profiles:
+    active: docker
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka

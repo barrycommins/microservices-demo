@@ -9,6 +9,8 @@ spring:
        bindings:
          output:
            destination: account
+server:
+  port: 8081
 ---
 spring:
   profiles: dev

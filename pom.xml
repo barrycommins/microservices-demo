@@ -20,6 +20,7 @@
         <module>account-service</module>
         <module>discovery-service</module>
         <module>admin-server</module>
+        <module>edge-service</module>
     </modules>
 
     <properties>

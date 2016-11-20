@@ -3,7 +3,15 @@ Microservices Demo, which will include service discovery, distributed tracing, c
 
 Many of the concepts, and some of the code will come from here: https://github.com/kbastani/spring-cloud-event-sourcing-example , but there will be some different technology choices and possibly a different problem domain.
 
-Currently only contains one service, Account Service which uses a MySQL database, but it not yet complete.
+Currently has:
+ 
+* a Discovery Service (Eureka), 
+
+* an Edge Service/Reverse Proxy (Zuul), 
+
+* an Admin Service for monitoring (Spring Boot Admin) 
+
+* and one domain service, Account, which has a MySQL database, but is incomplete.
 
 Docker support included through Spotify's Maven Docker Plugin, calling ```mvn clean install``` creates the Docker images.
 
