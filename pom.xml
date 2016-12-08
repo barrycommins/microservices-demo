@@ -21,6 +21,7 @@
         <module>discovery-service</module>
         <module>admin-server</module>
         <module>edge-service</module>
+        <module>microservices-dashboard</module>
     </modules>
 
     <properties>

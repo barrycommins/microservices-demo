@@ -29,6 +29,13 @@ services:
       - "9090:9090"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
+  dashboard-server:
+      image: barrycommins/microservices-dashboard
+      ports:
+        - "9190:9190"
+      environment:
+        - SPRING_PROFILES_ACTIVE=docker
+        - SERVER_PORT=9190
   mysql:
     image: mysql:5.7
     ports:

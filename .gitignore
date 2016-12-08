@@ -12,3 +12,4 @@
 hs_err_pid*
 /admin-server/.mvn/
 /edge-service/.mvn/
+/microservices-dashboard/.mvn/

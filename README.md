@@ -11,6 +11,8 @@ Currently has:
 
 * an Admin Service for monitoring (Spring Boot Admin) 
 
+* A Microservices Dashboard for visualising connections between components
+
 * and one domain service, Account, which has a MySQL database, but is incomplete.
 
 Docker support included through Spotify's Maven Docker Plugin, calling ```mvn clean install``` creates the Docker images.
