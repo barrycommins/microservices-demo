@@ -28,7 +28,7 @@ class AccountController {
 
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @ExceptionHandler(AccountNotFoundException.class)
-    void handleAccountNotFound(){
-
+    ErrorStatus handleAccountNotFound(){
+        return new ErrorStatus("Account not found");
     }
 }
