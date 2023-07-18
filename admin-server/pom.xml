@@ -16,7 +16,7 @@
 	</parent>
 
 	<properties>
-        <spring-boot-admin-server.version>1.4.4</spring-boot-admin-server.version>
+        <spring-boot-admin-server.version>3.1.2</spring-boot-admin-server.version>
     </properties>
 
 	<dependencies>
